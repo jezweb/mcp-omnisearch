@@ -1,4 +1,5 @@
 # mcp-omnisearch
+[![smithery badge](https://smithery.ai/badge/@jezweb/mcp-omnisearch)](https://smithery.ai/server/@jezweb/mcp-omnisearch)
 
 A Model Context Protocol (MCP) server that provides unified access to
 multiple search providers and AI tools. This server combines the
