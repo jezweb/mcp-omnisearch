@@ -1,0 +1,43 @@
+# Smithery configuration file: https://smithery.ai/docs/build/project-config
+
+startCommand:
+  type: stdio
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config)=>({ command: 'node', args: ['dist/index.js'], env: { ...config } })
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    properties:
+      tavilyApiKey:
+        type: string
+        default: ""
+        description: Tavily API key
+      perplexityApiKey:
+        type: string
+        default: ""
+        description: Perplexity AI API key
+      kagiApiKey:
+        type: string
+        default: ""
+        description: Kagi API key
+      jinaAiApiKey:
+        type: string
+        default: ""
+        description: Jina AI API key
+      braveApiKey:
+        type: string
+        default: ""
+        description: Brave Search API key
+      firecrawlApiKey:
+        type: string
+        default: ""
+        description: Firecrawl API key
+  exampleConfig:
+    tavilyApiKey: TAVILY_KEY
+    perplexityApiKey: PERP_KEY
+    kagiApiKey: KAGI_KEY
+    jinaAiApiKey: JINA_KEY
+    braveApiKey: BRAVE_KEY
+    firecrawlApiKey: FIRECRAWL_KEY
